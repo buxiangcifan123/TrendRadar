@@ -8,7 +8,9 @@ name: Check In
 #   2. 每 7 天内至少运行一次 / Run at least once every 7 days
 
 on:
-  workflow_dispatch:
+    schedule:
+      - cron: '0 0 */3 * *'
+    workflow_dispatch:
 
 jobs:
   del_runs:
